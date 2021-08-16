@@ -17,6 +17,6 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         Check::factory(30)->create();
-        Comments::factory(150)->create();
+        Comments::factory(60)->create();
     }
 }

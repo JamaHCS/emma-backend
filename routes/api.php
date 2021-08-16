@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('v1/checks', [CheckController::class, 'index']);
+Route::get('v1/checks/{check}', [CheckController::class, 'show']);
+Route::post('v1/checks/check', [CheckController::class, 'check']);
