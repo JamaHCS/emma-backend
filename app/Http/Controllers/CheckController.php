@@ -39,6 +39,6 @@ class CheckController extends Controller
         $check->long = $request->long;
         $check->save();
 
-        return response()->json($check, 200);
+        return response()->json($check, 202);
     }
 }

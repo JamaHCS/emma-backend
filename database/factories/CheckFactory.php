@@ -26,12 +26,10 @@ class CheckFactory extends Factory
     {
         $checked = $this->faker->boolean(50);
         $uuid = $this->faker->uuid();
-
-        $hash = md5(strtolower(trim($this->faker->email())));;
-
+        
         return [
             'name' => $this->faker->name(),
-            'image' => 'https://i.pravatar.cc/300',
+            'image' => 'https://avatars2.githubusercontent.com/u/' . $this->faker->randomNumber(3, false) . '?s=360',
             'check' => $uuid,
             'checked' => $checked,
             'lat' => $checked ? $this->faker->latitude() : 0,
