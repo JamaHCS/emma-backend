@@ -37,6 +37,7 @@ class CheckController extends Controller
         $check->checked = 1;
         $check->lat = $request->lat;
         $check->long = $request->long;
+        $check->checked_date = date("Y-m-d H:i:s");
         $check->save();
 
         return response()->json($check, 202);

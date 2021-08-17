@@ -26,14 +26,15 @@ class CheckFactory extends Factory
     {
         $checked = $this->faker->boolean(50);
         $uuid = $this->faker->uuid();
-        
+
         return [
             'name' => $this->faker->name(),
             'image' => 'https://avatars2.githubusercontent.com/u/' . $this->faker->randomNumber(3, false) . '?s=360',
             'check' => $uuid,
             'checked' => $checked,
-            'lat' => $checked ? $this->faker->latitude() : 0,
-            'long' => $checked ? $this->faker->longitude() : 0,
+            'checked_date' => $checked ? date("Y-m-d H:i:s") : null,
+            'lat' => $checked ? $this->faker->latitude() : null,
+            'long' => $checked ? $this->faker->longitude() : null,
             'pdf' => 'http://sostenible.palencia.uva.es/sites/default/files/page/attach/lorem_ipsum_definicion.pdf'
         ];
     }

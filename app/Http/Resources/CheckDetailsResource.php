@@ -27,6 +27,7 @@ class CheckDetailsResource extends JsonResource
             'name' => $this->name,
             'check' => $this->check,
             'checked' => $this->checked,
+            'checked_date' => $this->checked_date,
             'lat' => $this->lat,
             'long' => $this->long,
             'pdf' => $this->pdf,

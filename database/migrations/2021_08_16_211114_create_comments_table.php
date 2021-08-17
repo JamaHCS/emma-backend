@@ -18,6 +18,7 @@ class CreateCommentsTable extends Migration
 
             $table->string('comment');
             $table->bigInteger('check_id')->unsigned();
+            $table->string('by');
 
             $table->foreign('check_id')->references('id')->on('checks');
 

@@ -27,7 +27,8 @@ class CommentsFactory extends Factory
 
         return [
             'comment' => $this->faker->sentence(),
-            'check_id' => $this->faker->numberBetween(1, $howMuch)
+            'check_id' => $this->faker->numberBetween(1, $howMuch),
+            'by' => $this->faker->name
         ];
     }
 }

@@ -20,8 +20,9 @@ class CreateChecksTable extends Migration
             $table->string('name');
             $table->string('check');
             $table->boolean('checked');
-            $table->double('lat');
-            $table->double('long');
+            $table->dateTime('checked_date')->nullable();
+            $table->double('lat')->nullable();
+            $table->double('long')->nullable();
             $table->string('pdf');
 
             $table->timestamps();
