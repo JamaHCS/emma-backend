@@ -35,7 +35,7 @@ class CheckFactory extends Factory
             'checked_date' => $checked ? date("Y-m-d H:i:s") : null,
             'lat' => $checked ? $this->faker->latitude() : null,
             'long' => $checked ? $this->faker->longitude() : null,
-            'pdf' => 'http://sostenible.palencia.uva.es/sites/default/files/page/attach/lorem_ipsum_definicion.pdf'
+            'pdf' => 'https://bitcoin.org/bitcoin.pdf'
         ];
     }
 }
