@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CheckController;
+use App\Http\Controllers\ProductsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('v1/products', [ProductsController::class, 'index']);
 
 Route::get('v1/checks', [CheckController::class, 'index']);
 Route::get('v1/checks/{check}', [CheckController::class, 'show']);
