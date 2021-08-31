@@ -14,7 +14,7 @@ class CheckDetailsResource extends JsonResource
      */
     public function toArray($request)
     {
-
+// hola
         $comments = $this->comments()->get();
         $commentsResource = [];
         foreach ($comments as $comment) {
